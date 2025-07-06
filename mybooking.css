@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "Poppins", serif;
+    background-image: url(IMAGES/loginhome.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 200px;
+}
+
+body .container{
+    background-color: rgba(0, 0, 0, 0.26);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 30px black;
+}
+body .container #userDetails{
+    background-image: url(IMAGES/Blue\ Simple\ Boarding\ Pass\ Arlines\ Ticket.png);
+    background-size: cover;
+    height: 40vh;
+    width: 97%;
+    border-radius: 30px;
+    padding: 20px;
+    display: flex;
+    box-shadow: -5px 5px 10px black;
+    text-transform: uppercase;
+}
+
+body .container #userDetails .details1{
+    color: white;
+    margin-left: 150px;
+    width: 40%;
+}
+
+body .container #userDetails .details1 p{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+body .container #userDetails .details1 .innerdetails1{
+    display: flex;
+}
+
+body .container #userDetails .details1 .innerdetails1 p{
+    font-size: 1.5rem;margin-right: 50px;
+}
+
+body .container #userDetails .details2{
+    color: white;
+    width: 40%;
+}
+
+body .container #userDetails .details2 p{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+body .container #userDetails .details2 .innerdetails2{
+    display: flex;
+    align-items: center;
+}
+
+body .container #userDetails .details2 h3{
+    font-size: 1.5rem;
+}
+
+body .container #userDetails .details2 .innerdetails2 p{
+    font-size: 1.5rem;
+    margin-right: 50px;
+}
+
+body .container #userDetails .details2 .cendetails
+{
+    display: flex;
+    align-items: center;
+}
+
+body .container #userDetails .details2 .cendetails span{
+    font-size: 2.2rem;
+    width: 100%;
+    margin-left: 180px;
+    border: 3px solid rgb(0, 255, 0);
+    padding: 10px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body .container #userDetails .details2 img{
+    height: 85px;
+    margin-bottom: 20px;
+}
+
+body #backtomain{
+    font-size: 1.5rem;
+    margin-top: 50px;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(0, 100, 140);
+    border: 3px solid transparent;
+    border-radius: 10px;
+    box-shadow: -2px 2px 5px black;
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+body #backtomain:hover{
+    color: rgb(0, 100, 140);
+    background-color: aliceblue;
+    border-color: rgb(0, 100, 140);
+    transform: scale(1.05);
+    box-shadow: -3px 3px 8px black;
+}
+
+.nodetails{
+    font-size: 3rem;
+    margin-left: 650px;
+    margin-top: 150px;
+    color: aliceblue;
+    font-weight: 600;
+}

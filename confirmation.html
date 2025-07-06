@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26PILOTS | Booking Confirmation</title>
+    <link rel="icon" href="/IMAGES/LOGO.png">
+    <link rel="stylesheet" href="booking.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="Booking">
+        <div class="bookingMain">
+            <div class="left">
+                <div class="innerleft">
+                    <div class="booking-container">
+                        <h1>Booking <br><span>Confirmed!</span></h1>
+                        <div class="confirmation-details">
+                            <p>Thank you for choosing 26PILOTS. Your booking has been confirmed!</p>
+                            <p>A confirmation email has been sent to your registered email address.</p>
+                            <button class="button" onclick="window.location.href='mybooking.html'">
+                                Check Booking
+                                <div class="hoverEffect"><div></div></div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Display booking ID from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('bookingId').textContent = urlParams.get('booking');
+    </script>
+</body>
+</html>

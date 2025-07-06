@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    width: auto;
+    background-image: url(/IMAGES/home.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: "Poppins", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .container{
+    padding: 20px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.197);
+    backdrop-filter: blur(10px);
+    display: flex;
+    width: 50vh;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.502);
+}
+
+body .container h2{
+    font-size: 3rem;
+    padding-bottom: 60px;
+    margin: 20px 0px 40px 0px;
+    justify-self: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.162);
+}
+
+body .container .form_control{
+    margin: 30px 0px;
+}
+
+body .container .form_control input{
+    width: 40vh;
+    font-size: 1.3rem;
+    padding: 10px 10px;
+    background-color: transparent;
+    outline: none;
+    border: 0px solid transparent;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.114);
+    color: rgba(0, 0, 0, 0.76);
+    font-weight: 100;
+}
+
+body .container .form_control input::placeholder{
+    color: rgba(255, 255, 255, 0.17);
+}
+
+body .container .form_control label{
+    font-size: 1.1rem;
+}
+
+
+body .container .form_control #password{
+  content: hidden;
+}
+
+
+/* From Uiverse.io by SujitAdroja */ 
+body .container .form .btn {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: 2px solid rgb(0, 147, 205);
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-weight: bold;
+    background: transparent;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+    margin: 20px 0px 40px 0px;
+  }
+  
+  body .container .form .btn:hover {
+    color: white;
+  }
+  
+  body .container .form .btn::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: rgb(0, 147, 205);
+    z-index: -1;
+    transition: all 1s;
+  }
+  
+  body .container .form .btn:hover::before {
+    width: 160%;
+  }
+
+  body .container .form h5{
+    justify-self: center;
+    color: rgba(255, 255, 255, 0.365);
+  }
+  

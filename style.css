@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: aliceblue;
+    height: 100vh;
+    width: auto;
+    font-family: "Poppins", serif;
+}
+
+
+body .Home{
+    height: 100vh;
+    width: auto;
+    background-image: url(/IMAGES/loginhome.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body .Home .homeMain{
+    padding: 0px 118px 0px 118px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body .Home .homeMain .right{
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+body .Home .homeMain .right img{
+    max-height: 68px;
+    min-height: 68px;
+    margin: 10px 50px;
+    transition: 0.2s;
+    filter: drop-shadow(0px 0px 5px rgb(0, 0, 0));
+}
+body .Home .homeMain .right img:hover{
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));
+}
+
+body .Home .homeMain .left{
+    background-color: rgba(0, 0, 0, 0.103);
+    backdrop-filter: blur(10px);
+    width: 80%;
+    border-radius: 25px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.242);
+    padding: 20px;
+    margin-top: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+body .Home .homeMain .left .innerleft h1{
+    font-size: 5rem;
+    text-shadow: -2px 1px 5px black;
+}
+body .Home .homeMain .left .innerleft h1 span{
+    color: rgb(78, 202, 251);
+}
+
+body .Home .homeMain .left .innerleft p{
+    margin: 10px 0px;
+    font-size: 1.5rem;
+    text-shadow: -2px 1px 5px black;
+}
+
+
+body .Home .homeMain .left .innerleft{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px 20px;
+}
+
+body .Home .homeMain .left .innerleft .buttons button{
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+/* From Uiverse.io by Wendell47 */ 
+body .Home .homeMain .left .innerleft .buttons .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    z-index: 0;
+    box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
+    min-width: 150px;
+    max-width: 150px;
+  }
+  
+  body .Home .homeMain .left .innerleft .buttons .button:hover {
+    background: rgb(193, 228, 248);
+    color: rgb(33, 0, 85);
+    transform: scale(1.1);
+  }
+  
+  body .Home .homeMain .left .innerleft .buttons .button:active {
+    transform: scale(0.97);
+  }
+  
+  .hoverEffect {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .hoverEffect div {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      90deg,
+      rgb(0, 38, 255) 0%,
+      rgb(0, 123, 255) 49%,
+      rgba(0, 212, 255, 1) 100%
+    );
+    border-radius: 40rem;
+    width: 10rem;
+    height: 10rem;
+    transition: 0.4s;
+    filter: blur(20px);
+    animation: effect infinite 3s linear;
+    opacity: 0.5;
+  }
+  
+  body .Home .homeMain .left .innerleft .buttons .button:hover .hoverEffect div {
+    width: 8rem;
+    height: 8rem;
+  }
+  
+  @keyframes effect {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+body .offers{
+    height: 100vh;
+}

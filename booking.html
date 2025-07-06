@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26PILOTS | Book Your Flight</title>
+    <link rel="icon" href="/IMAGES/LOGO.png">
+    <link rel="stylesheet" href="./booking.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="Booking">
+        <div class="bookingMain">
+            <div class="left">
+                <div class="innerleft">
+                    <div class="booking-container">
+                        <div class="steps-indicator">
+                            <div class="step active" data-step="1">Details</div>
+                            <div class="step" data-step="2">Seats</div>
+                            <div class="step" data-step="3">Payment</div>
+                        </div>
+                        <h1>Book Your <br><span>Flight</span></h1>
+                        <form id="bookingForm" action="process_booking.php" method="POST">
+                            <!-- Step 1: Existing booking details -->
+                            <div class="form-step" id="step1">
+                                <div class="form-group">
+                                    <input type="text" id="name" placeholder="Full Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="email" placeholder="Email Address" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <input type="number" id="passengers" placeholder="Passengers" min="1" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <select id="class" required>
+                                            <option value="">Select Class</option>
+                                            <option value="economy">Economy</option>
+                                            <option value="business">Business</option>
+                                            <option value="first">First Class</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" id="date" required>
+                                </div>
+                                <button type="button" class="button next-step">Continue to Seat Selection</button>
+                            </div>
+
+                            <!-- Step 2: Seat Selection -->
+                            <div class="form-step" id="step2" style="display: none;">
+                                <div class="seat-map">
+                                    <div class="plane-header">Front</div>
+                                    <div id="seatGrid"></div>
+                                </div>
+                                <div class="seat-info">
+                                    <p>Selected Seats: <span id="selectedSeats"></span></p>
+                                    <p>Price: $<span id="totalPrice">0</span></p>
+                                </div>
+                                <div class="step-buttons">
+                                    <button type="button" class="button prev-step">Back</button>
+                                    <button type="button" class="button next-step">Continue to Payment</button>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Payment -->
+                            <div class="form-step" id="step3" style="display: none;">
+                                <div class="payment-methods">
+                                    <div class="payment-method-selector">
+                                        <h3>Select Payment Method</h3>
+                                        <div class="payment-options">
+                                            <label class="payment-option">
+                                                <input type="radio" name="paymentMethod" value="card" checked>
+                                                <span>Credit/Debit Card</span>
+                                            </label>
+                                            <label class="payment-option">
+                                                <input type="radio" name="paymentMethod" value="paypal">
+                                                <span>PayPal</span>
+                                            </label>
+                                            <label class="payment-option">
+                                                <input type="radio" name="paymentMethod" value="googlepay">
+                                                <span>Google Pay</span>
+                                            </label>
+                                            <label class="payment-option">
+                                                <input type="radio" name="paymentMethod" value="applepay">
+                                                <span>Apple Pay</span>
+                                            </label>
+                                            <label class="payment-option">
+                                                <input type="radio" name="paymentMethod" value="banktransfer">
+                                                <span>Bank Transfer</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Credit Card Form -->
+                                    <div class="payment-form" id="cardPaymentForm">
+                                        <div class="form-group">
+                                            <label>Card Number</label>
+                                            <input type="text" id="cardNumber" pattern="\d{16}" required placeholder="1234 5678 9012 3456">
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label>Expiry Date</label>
+                                                <input type="text" id="expiryDate" pattern="\d{2}/\d{2}" required placeholder="MM/YY">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>CVV</label>
+                                                <input type="text" id="cvv" pattern="\d{3,4}" required placeholder="123">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- PayPal Form -->
+                                    <div class="payment-form" id="paypalForm" style="display: none;">
+                                        <div class="form-group">
+                                            <label>PayPal Email</label>
+                                            <input type="email" id="paypalEmail" placeholder="your@email.com">
+                                        </div>
+                                    </div>
+
+                                    <!-- Bank Transfer Form -->
+                                    <div class="payment-form" id="bankTransferForm" style="display: none;">
+                                        <div class="bank-details">
+                                            <h4>Bank Account Details</h4>
+                                            <p>Bank Name: Example Bank</p>
+                                            <p>Account Number: 1234567890</p>
+                                            <p>SWIFT/BIC: EXBKXXXX</p>
+                                            <p>IBAN: XX00 0000 0000 0000 0000 0000</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Google Pay and Apple Pay buttons -->
+                                    <div class="payment-form" id="googlePayForm" style="display: none;">
+                                        <button type="button" class="gpay-button">Pay with Google Pay</button>
+                                    </div>
+
+                                    <div class="payment-form" id="applePayForm" style="display: none;">
+                                        <button type="button" class="apple-pay-button">Pay with Apple Pay</button>
+                                    </div>
+                                </div>
+                                <div class="step-buttons">
+                                    <button type="button" class="button prev-step">Back</button>
+                                    <button type="submit" class="button">Confirm Booking</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./booking.js"></script>
+</body>
+</html>

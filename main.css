@@ -1,0 +1,591 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Poppins", serif;
+}
+
+body .Home nav{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.137);
+    height: 8vh;
+    padding: 10px 100px 10px 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+body .Home nav i{
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 15px;
+    transition: 0.2s;
+    text-transform: lowercase;
+    font-size: 1.2rem;
+}
+
+body .Home nav i:hover{
+    border: 2px solid rgb(78, 202, 251);
+    transform: scale(1.05);
+}
+
+body .Home nav img{
+    height: 6vh;
+    filter: drop-shadow(0px 0px 10px black);
+    margin-left: 100px ;
+    transition: 0.2s;
+}
+
+body .Home nav img:hover{
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 15px black);
+}
+
+body .Home nav ul{
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+}
+
+body .Home nav ul li{
+    margin-left: 50px;
+    list-style: none;
+    transition: 0.2s;
+}
+
+body .Home nav ul li:hover{
+    transform: scale(1.1);
+}
+
+body .Home nav ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+body .Home nav ul li a:hover{
+    color: rgb(0, 183, 255);
+    text-shadow: -1px 0px 2px rgba(0, 0, 0, 0.513);
+}
+
+body .Home nav ul li button{
+    background-color: transparent;
+    font-size: 1.3rem;
+    border: 2px solid white;
+    color: white;
+    border-radius: 10px;
+    font-weight: 500;
+    padding: 8px 30px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+body .Home nav ul li button:hover{
+    color: rgb(0, 183, 255);
+    text-shadow: -1px 0px 2px rgba(0, 0, 0, 0.513);
+    border: 2px solid rgb(78, 202, 251);
+    transform: scale(1.05);
+}
+
+body .homesection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:url(/IMAGES/loginhome.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body .homesection .container{
+    width: 80%;
+    margin-left: 100px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    background-color: rgba(0, 0, 0, 0.209);
+    backdrop-filter: blur(10px);
+    border: 0px solid none;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.513);
+}
+
+body .homesection .container h1{
+    font-size: 2.5rem;
+    color: white;
+}
+
+body .homesection .container .cardcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+body .homesection .container .card{
+    background-color: rgba(0, 0, 0, 0.152);
+    backdrop-filter: blur(10px);
+    height: 50vh;
+    width: 35vh;
+    border: 0px solid none;
+    border-radius: 25px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    margin: 30px 0px 50px 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.704);
+}
+
+body .homesection .container .card img{
+    height: 30vh;
+    border: 0px solid none;
+    border-radius: 15px;
+    margin: 0px 25px;
+}
+body .homesection .container .card h4{
+    align-self: left;
+    color: white;
+    margin: 10px 25px 0px 25px;
+    font-size: 1.2rem;
+}
+
+body .homesection .container .card .pricecart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+body .homesection .container .card .pricecart button{
+    margin-right: 25px;
+    color: white;
+    background-color: transparent;
+    font-size: 1.3rem;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+body .homesection .container .card .pricecart button:hover{
+    color:rgb(0, 183, 255);
+    border-color: rgb(0, 183, 255);
+}
+
+body .homesection .container .card  p{
+    color: white;
+    /* width: 80%; */
+    margin: 10px 25px 0px 25px;
+}
+
+body .homesection .container .card:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.541);
+}
+
+
+body .book{
+    background: #1c92d2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #1c92d2,#f2fcfe ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0px 0px 1000px rgba(0, 0, 0, 0.468) inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body .book .bookcontainer{
+    background-color: rgba(0, 0, 0, 0.209);
+    width: 80%;
+    backdrop-filter: blur(10px);
+    border: 0px solid none;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.513);
+    margin-left: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: white;
+}
+
+body .book .bookcontainer .top{
+    background-color: rgba(0, 0, 0, 0.501);
+    border: 0px solid transparent;
+    border-radius: 20px 20px 0px 0px ;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body .book .bookcontainer .top h3{
+    width: 100%;
+    font-size: 2.5rem;
+    justify-content: left;
+    margin: 50px 0px 50px 70px;
+}
+
+body .book .bookcontainer .top .input{
+    margin-bottom: 80px;
+}
+
+body .book .bookcontainer .top .input input{
+    font-size: 2rem;
+    padding: 15px 10px;
+    background-color: transparent;
+    outline: none;
+    border: 0px solid transparent;
+    border-bottom: 2px solid rgb(0, 183, 255);
+    color: white;
+}
+
+body .book .bookcontainer .top .input input::placeholder{
+    font-size: 1.2rem;
+}
+
+body .book .bookcontainer .top .input #rightarrow{
+    font-size: 2rem;
+    margin: 0px 50px;
+}
+
+body .book .bookcontainer .top .input button{
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: white;
+    border: 0px solid transparent;
+    cursor: pointer;
+    transition: 0.2s;
+    padding: 17px 0px;
+    border-bottom: 2px solid rgb(0, 183, 255);
+}
+
+body .book .bookcontainer .top .input button:hover{
+    color: rgb(0, 183, 255);
+    transform: scale(1.1);
+    padding: 14.6px 0px ;
+}
+
+
+body .book .bookcontainer .top .checkbtn{
+    font-size: 2rem;
+    padding: 10px 30px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    transition: 0.2s;
+}
+
+body .book .bookcontainer .top .checkbtn:hover{
+    transform: scale(1.1);
+    color: rgb(0, 183, 255);
+    border: 2px solid rgb(0, 183, 255);
+}
+
+body .book .bookcontainer .top #error{
+    margin-bottom: 25px;
+    margin-top: 25px;
+    color: red;
+}
+
+body .book .bookcontainer .bottom{
+    height: 60vh;
+    background-color: rgba(0, 0, 0, 0.251);
+    border: 0px solid transparent;
+    border-radius: 0px 0px 20px 20px ;
+    backdrop-filter: blur(10px);
+    overflow-y:scroll;
+    padding-bottom: 25px;
+}
+
+
+body .book .bookcontainer .bottom #results-section {
+    margin-top: 20px;
+}
+ .result-card {
+    background: #0000003a;
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    margin: 0px 30px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    display: flex;
+    transition: 0.2s;
+}
+
+.result-card:hover{
+    background: #0000007c;
+}
+
+.result-card h3 {
+    margin: 0 0 10px;
+    color: rgb(0, 183, 255);
+    font-size: 2rem;
+}
+.result-card .carddetails{
+    display: flex;
+}
+
+.result-card .carddetails p{
+    font-size: 1.4rem;
+    margin-right: 50px;
+}
+
+.result-card .leftcard{
+    width: 60%;
+}
+
+.result-card .rightcard{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-card .rightcard .bookbtn{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 10px 40px;
+    color: white;
+    background-color: rgba(0, 183, 255, 0.334);
+    border: 2px solid white;
+    transition: 0.2s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.result-card .rightcard .bookbtn:hover{
+    color: rgb(0, 183, 255);
+    border: 2px solid rgb(0, 183, 255);
+    transform: scale(1.05);
+    background-color: white;
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* Width of the vertical scrollbar */
+    height: 12px; /* Height of the horizontal scrollbar */
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.273); /* Light gray background */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #007bff; /* Blue color for the thumb */
+    border-radius: 0px; /* Optional: Rounded corners */
+    height: 10vh;
+}
+
+
+body .email{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 30px;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.468) inset;
+    background-color: #3498db71;
+}
+
+body .email .left{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 50px;
+    color:#007bff;
+    text-shadow: -2px 0px 3px rgba(0, 0, 0, 0.645);
+    border-right: 2px solid rgba(0, 0, 0, 0.181);
+}
+
+body .email .left h3{
+    font-size: 3rem;
+    margin-left: 130px;
+}
+
+body .email .right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+}
+
+body .email .right label{
+    font-size: 1.5rem;
+    width: 90%;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+body .email .right input{
+    font-size: 1.3rem;
+    padding: 10px 20px 10px 5px;
+    width: 87%;
+    outline: none;
+    overflow: scroll;
+    background-color: transparent;
+    border: 0px solid transparent;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.411);
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+body .email .right input::placeholder{
+    color: rgba(0, 0, 0, 0.205);
+}
+
+body .email .right .buttonholder{
+    width: 90%;
+    padding: 30px 0px 0px 0px ;
+}
+
+body .email .right .buttonholder .msgsbt{
+    font-size: 1.5rem;
+    padding: 10px 30px;
+    cursor: pointer;
+    border: 3px solid #007bff;
+    background-color: transparent;
+    color: #007bff;
+    transition: 0.2s;
+    font-weight: 700;
+    box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.544);
+}
+
+body .email .right .buttonholder .msgsbt:hover{
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.544);
+}
+
+body .help{
+    background: #2c3e50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2c3e50 ,#3498db); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 80px 100px 50px 100px;
+    display: flex;
+}
+
+body .help .left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    padding: 30px;
+    width: 50%;
+    border-right: 2px solid rgba(0, 0, 0, 0.225);
+}
+
+body .help .location{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+body .help .location i{
+    border: 0px solid transparent;
+    margin-right: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.23);
+    padding: 15px;
+    font-size: 1.5rem;
+}
+
+body .help .location p{
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.337);
+}
+
+body .help .right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    padding: 30px;
+    width: 50%;
+    color: white;
+}
+
+body .help .right .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+body .help .right .top img{
+    height: 50px;
+    margin-right: 200px;
+}
+
+body .help .right .bottom {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+body .help .right .bottom i{
+    margin-right: 20px;
+    font-size: 1.5rem;
+    max-width: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.376);
+    padding: 15px 20px;
+    border-radius: 50%;
+}
+
+#sendsucc{
+    background-color: rgba(0, 0, 0, 0.114);
+    padding: 20px 30px;
+    color : #007bff;
+    font-size: 2.5rem;
+    margin:0px 90px;
+    border-radius: 20px;
+    font-weight: 700;
+    text-shadow: -2px 0px 3px rgba(0, 0, 0, 0.435);
+}
+
+
+.result-card .centercard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+}
+
+.result-card .centercard p{
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+}
+
+.result-card .centercard span{
+    color: rgb(153, 255, 0);
+}
+
+.result-card .centercard h4{
+    font-size: 1.4rem;
+}
